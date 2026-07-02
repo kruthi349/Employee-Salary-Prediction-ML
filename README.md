@@ -154,7 +154,8 @@ http://127.0.0.1:5000
 
 ## 📷 Application
 
-Add a screenshot here.
+<img width="884" height="423" alt="app" src="https://github.com/user-attachments/assets/b8c41841-0eeb-41ce-8e01-f02ad0fdc69a" />
+
 
 Example:
 
