@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Salary Prediction</title>
+
+    <link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="left">
+
+        <h1>💰 Employee Salary Predictor</h1>
+
+        <p>
+            Predict employee salary using Machine Learning.
+        </p>
+
+        <form id="salaryForm">
+
+            <div class="grid">
+
+                <div class="input-box">
+
+                    <label>Job Title</label>
+
+                    <select id="job" title="job">
+                        <option>Software Engineer</option>
+                        <option>Data Scientist</option>
+                        <option>AI Engineer</option>
+                        <option>Backend Developer</option>
+                        <option>Frontend Developer</option>
+                        <option>Business Analyst</option>
+                        <option>Machine Learning Engineer</option>
+                        <option>Cloud Engineer</option>
+                        <option>DevOps Engineer</option>
+                        <option>Cybersecurity Analyst</option>
+                        <option>Product Manager</option>
+                        <option>Data Analyst</option>
+                    </select>
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>Experience (Years)</label>
+
+                    <input type="number" id="experience" min="0"  placeholder="Enter years of experience">
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>Education</label>
+
+                    <select id="education" title="education">
+
+                        <option>Bachelor</option>
+                        <option>Master</option>
+                        <option>PhD</option>
+                        <option>Diploma</option>
+                        <option>High School</option>
+
+                    </select>
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>Skills Count</label>
+
+                    <input type="number" id="skills"  placeholder="Enter skills count">
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>Industry</label>
+
+                    <select id="industry" title="industry">
+
+                        <option>Technology</option>
+                        <option>Finance</option>
+                        <option>Healthcare</option>
+                        <option>Education</option>
+                        <option>Government</option>
+                        <option>Manufacturing</option>
+                        <option>Retail</option>
+                        <option>Consulting</option>
+                        <option>Media</option>
+                        <option>Telecom</option>
+
+                    </select>
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>Company Size</label>
+
+                    <select id="company" title="company">
+
+                        <option>Startup</option>
+                        <option>Small</option>
+                        <option>Medium</option>
+                        <option>Large</option>
+                        <option>Enterprise</option>
+
+                    </select>
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>Location</label>
+
+                    <select id="location" title="location">
+
+                        <option>India</option>
+                        <option>USA</option>
+                        <option>Canada</option>
+                        <option>Australia</option>
+                        <option>Germany</option>
+                        <option>UK</option>
+                        <option>Singapore</option>
+                        <option>Sweden</option>
+                        <option>Netherlands</option>
+                        <option>Remote</option>
+
+                    </select>
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>Remote Work</label>
+
+                    <select id="remote" title="remote">
+
+                        <option>No</option>
+                        <option>Hybrid</option>
+                        <option>Yes</option>
+
+                    </select>
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>Certifications</label>
+
+                    <input type="number" id="certifications" placeholder="Enter certifications count">
+
+                </div>
+
+            </div>
+
+            <button type="submit">
+                Predict Salary
+            </button>
+
+        </form>
+
+    </div>
+
+    <div class="right">
+
+        <h2>Prediction Result</h2>
+
+        <div class="salary-card">
+
+            <span>Estimated Salary</span>
+
+            <h1 id="salary">₹ --</h1>
+
+            <p id="message">
+                Fill the form and click Predict.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
